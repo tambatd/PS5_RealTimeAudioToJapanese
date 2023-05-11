@@ -2,7 +2,6 @@ import speech_recognition as sr
 import pyaudio
 import openai
 
-
 def query_question(question):
     response = openai.Completion.create(
         engine='text-davinci-003',
@@ -14,10 +13,9 @@ def query_question(question):
     answer = response.choices[0].text.strip()
     return answer
 
-
 def main():
     init_rec = sr.Recognizer()
-    openai.api_key = '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'
+    openai.api_key = '#'
     with sr.Microphone() as source:
         while True:
             try:
@@ -26,7 +24,7 @@ def main():
                 print(text)
                 try:
                     answer = query_question(
-                        "You are a Japanese proffesor at the University of Michigan, translate the following sentence into Japanese: " + text)
+                        "You are hyper-fluent in Japanese, translate the following English sentence into Japanese: " + text)
                     print(answer)
                 except:
                     print("Error")
@@ -36,3 +34,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+   
