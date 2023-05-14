@@ -24,7 +24,7 @@ body {
 .psNotification {
   display: flex;
   align-items: center;
-  height: calc(2 / 3 * 140px);
+  height: calc(2 / 3 * 163px);
   width: calc(2 / 3 * 713px);
   background-color: #18282d;
   border-radius: calc(33px);
@@ -48,6 +48,7 @@ body {
 .userName {
   color: #8b9396;
   display: inline;
+  font-size: calc(2 / 3 * 20px);
 }
 
 .profileIcon {
