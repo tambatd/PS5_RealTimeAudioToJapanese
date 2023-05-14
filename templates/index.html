@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/index.css') }}"
+    />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.2"
+      integrity="sha384-L6OqL9pRWyyFU3+/bjdSri+iIphTN/bvYyM37tICVyOJkWZLpP2vGn6VUEXgzg6h"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>PlayStation</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="psNotification">
+        <img src="http://127.0.0.1:8000/static/icon.png" class="profileIcon" />
+        <div class="textBlock">
+          <p class="text" hx-get="/transcribedText" hx-trigger="every 1s"></p>
+          <p class="userName">— Asq4</p>
+        </div>
+      </div>
+
+      <div class="psNotification">
+        <img src="http://127.0.0.1:8000/static/icon.png" class="profileIcon" />
+        <div class="textBlock">
+          <p hx-get="/translatedText" hx-trigger="every 1s"></p>
+          <p class="userName">— Asq4</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
